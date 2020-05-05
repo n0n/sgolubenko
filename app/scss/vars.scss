@@ -1,0 +1,21 @@
+@mixin retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min-resolution: 1.5dppx),
+    only screen and (min-resolution: 144dpi) {
+        @content;
+    }
+}
+
+@mixin reset-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+$tablet-width: 768px;
+$desktop-width: 1280px;
+
+$menu-burger-bg: #FFFFF3;
+

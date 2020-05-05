@@ -1,0 +1,137 @@
+.main-nav {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: $menu-burger-bg;
+    border-radius: 35px;
+
+    &--closed {
+        display: none;
+    }
+
+    &--opened {
+        display: block;
+    }
+
+    &--no-js {
+        display: block;
+        position: static;
+    }
+}
+
+.main-nav__list {
+    @include reset-style;
+    padding-top: 22px;
+    padding-bottom: 26px;
+}
+
+.main-nav__item {
+    margin-bottom: 28px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.main-nav__link {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #321515;
+}
+
+.toggle {
+    position: absolute;
+    top: 22px;
+    right: 0px;
+    font-size: 0;
+}
+
+.toggle--opened {
+    top: -7px;
+    right: 14px;
+    padding: 0;
+    width: 28px;
+    height: 30px;
+    font-size: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 28px;
+        width: 3px;
+        height: 28px;
+        background-color: #fffff3;
+        border-radius: 5px;
+    }
+    &:before {
+        transform: rotate(-45deg);
+    }
+    &:after {
+        transform: rotate(45deg);
+    }
+}
+
+.toggle--closed {
+    padding: 0;
+    width: 30px;
+    height: 3px;
+    font-size: 0;
+    border: 0;
+    outline: 0;
+    background-color: #fffff3;
+    border-radius: 5px;
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        height: inherit;
+        background-color: inherit;
+        transition: all ease 0.3s;
+        border-radius: 5px;
+    }
+    &:before {
+        top: -7px;
+        width: 27px;
+    }
+    &:after {
+        top: 7px;
+        width: 23px;
+    }
+}
+
+.toggle--no-js {
+    display: none;
+}
+
+@media (min-width: $tablet-width) {
+    .main-nav {
+        position: unset;
+        display: block;
+        width: 300px;
+        background-color: transparent;
+        &__list {
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+        }
+        &__item {
+            margin-bottom: 0;
+        }
+        &__link {
+            color: #fffff3;
+        }
+    }
+    .toggle {
+        display: none;
+    }
+}

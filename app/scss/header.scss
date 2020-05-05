@@ -1,0 +1,56 @@
+.main-header {
+    padding: 20px 0 40px;
+    background-image: url(../images/header-bg@1x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__top {
+        position: relative;
+        margin-bottom: 22px;
+    }
+    &__img-wrapper {
+        margin-bottom: 22px;
+        text-align: center;
+    }
+    &__title {
+        @include reset-style;
+        margin-bottom: 22px;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 24px;
+    }
+    &__text {
+        @include reset-style;
+        margin-bottom: 22px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    &__button {
+        margin: 0 auto;
+        width: 200px;
+    }
+}
+
+.logo {
+    &__title {
+        @include reset-style;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 25px;
+    }
+    &__subtitle {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 25px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .main-header {
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+}
