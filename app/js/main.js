@@ -38,10 +38,11 @@ $(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    rows: 2,
+                    rows: 3,
                     arrows: false,
                     dots: true,
-                    dotsClass: 'services-dots'
+                    dotsClass: 'services-dots',
+                    autoplay: false
                 }
             }
         ]

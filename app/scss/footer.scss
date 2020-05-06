@@ -1,0 +1,192 @@
+.footer {
+    padding: 25px 0 16px;
+    text-align: center;
+    background-color: $footer-bg;
+    &-title {
+        @include reset-style;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 25px;
+    }
+    &__copy {
+        @include reset-style;
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.social {
+    margin-bottom: 26px;
+    &__list {
+        @include reset-style;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 198px;
+    }
+    &__link {
+        font-size: 0;
+    }
+    svg {
+        fill: $text-light;
+    }
+}
+
+.address {
+    margin-bottom: 26px;
+    &__text {
+        @include reset-style;
+        font-size: 16px;
+        line-height: 18px;
+        white-space: pre-line;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+    &__link {
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 18px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.due {
+    margin-bottom: 42px;
+    &__text {
+        @include reset-style;
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 18px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__weekday {
+        padding-left: 10px;
+    }
+    &__weekend {
+        padding-left: 5px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .footer {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        &__copyright {
+            margin: 0 auto;
+        }
+    }
+    .social,
+    .address,
+    .contacts,
+    .due {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        text-align: left;
+        &__info {
+            margin-bottom: 55px;
+        }
+        &__copyright {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            width: 60%;
+        }
+        &__copy--dev {
+            order: -1;
+        }
+    }
+    .social,
+    .address,
+    .contacts,
+    .due {
+        margin-bottom: 0;
+        width: unset;
+    }
+    .social {
+        &__list {
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .footer {
+        padding: 50px 0 20px;
+        &-title {
+            margin-bottom: 18px;
+            font-size: 26px;
+            line-height: 30px;
+        }
+        &__info {
+            margin-bottom: 60px;
+        }
+        &__copy--dev {
+            a:hover {
+                color: $link-hover;
+                transition: 0.7s;
+            }
+        }
+    }
+    .social {
+        &__list {
+            width: 232px;
+        }
+        svg {
+            transform: scale(1.2);
+            &:hover {
+                fill: $link-hover;
+                transition: 0.7s;
+            }
+        }
+    }
+    .address {
+        &__text {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+    .contacts {
+        &__link {
+            font-size: 20px;
+            line-height: 23px;
+            &:hover {
+                color: $link-hover;
+                transition: 0.7s;
+            }
+        }
+    }
+    .due {
+        &__text {
+            font-size: 20px;
+            line-height: 23px;
+        }
+        &__weekend {
+            padding-left: 14px;
+        }
+    }
+}
