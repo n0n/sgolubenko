@@ -55,3 +55,17 @@ a {
     padding: 0 30px;
   }
 }
+
+
+@media (min-width: $desktop-width) {
+  .container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1240px;
+  }
+  .button {
+    padding: 14px 20px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
