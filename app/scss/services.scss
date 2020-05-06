@@ -1,0 +1,204 @@
+.services {
+    padding: 30px 0;
+    background-color: $services-bg;
+    &__title {
+        @include reset-style;
+        position: relative;
+        margin-bottom: 36px;
+        padding-bottom: 12px;
+        font-family: "IBM Plex Serif", Georgia, serif;
+        font-weight: normal;
+        text-align: center;
+        font-size: 36px;
+        line-height: 47px;
+        color: $text-dark;
+        &:after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 122px;
+            height: 3px;
+            background-color: $text-dark;
+        }
+    }
+    &__list {
+        @include reset-style;
+    }
+}
+
+.services-item {
+    margin-bottom: 27px;
+    &__link {
+        display: block;
+        padding: 16px 10px;
+        background-color: $services-item;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: 0px 12px;
+        height: 140px;
+        border: 1px solid #7b7b7b;
+        border-radius: 20px;
+    }
+    &__img {
+        margin-right: 10px;
+    }
+    &__content {
+        color: $text-dark;
+    }
+    &__title {
+        @include reset-style;
+        margin-bottom: 10px;
+        font-family: "IBM Plex Serif", Georgia, serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__text {
+        @include reset-style;
+        line-height: 15px;
+    }
+}
+
+.services-dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    list-style: none;
+    button {
+        border: none;
+        background-color: $text-dark;
+        font-size: 0;
+        padding: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+        margin: auto 8px;
+        display: block;
+    }
+    .slick-active button {
+        margin-top: -2px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .services__list {
+        .slick-slide {
+            margin: 0 10px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .services {
+        padding: 45px 0;
+        &__title {
+            margin-bottom: 60px;
+            padding-bottom: 15px;
+            font-size: 44px;
+            line-height: 57px;
+            &:after {
+                width: 155px;
+            }
+        }
+    }
+    .services-item {
+        margin-bottom: 40px;
+        &__link {
+            padding: 16px 20px;
+        }
+        &__inner {
+            padding: 0px 15px 24px;
+            height: 180px;
+        }
+        &__img {
+            margin-right: 25px;
+            svg {
+                width: 75px;
+                height: 75px;
+            }
+        }
+        &__title {
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+    .services-dots {
+        padding: 20px 0;
+        button {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+            outline: none;
+            margin: auto 15px;
+            display: block;
+        }
+        .slick-active button {
+            margin-top: -5px;
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .services {
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        &__title {
+            margin-bottom: 72px;
+        }
+    }
+    .services__list {
+        .slick-slide {
+            margin: 0 30px;
+        }
+    }
+    .services-item {
+        margin-bottom: 50px;
+        &__inner {
+            height: 200px;
+        }
+        &__img {
+            svg {
+                width: 90px;
+                height: 90px;
+            }
+        }
+        &__title {
+            margin-bottom: 15px;
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 21px;
+        }
+        &:hover {
+            .services-item__link {
+                background-color: $text-dark;
+                transition: .7s;
+            }
+            .services-item__content {
+                color: $text-light;
+                transition: .7s;
+            }
+        }
+    }
+}
