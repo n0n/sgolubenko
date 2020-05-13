@@ -85,7 +85,7 @@ gulp.task('export', function () {
     var buildFonts = gulp.src('app/fonts/**/*.*')
         .pipe(gulp.dest('dist/fonts'))
 
-    var webp = gulp.src('app/images/*.webp')
+    var webp = gulp.src('app/images/*.{webp,ico}')
         .pipe(gulp.dest('dist/images'))
 });
 
