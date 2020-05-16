@@ -40,11 +40,14 @@
         align-items: center;
         padding: 0px 12px;
         height: 140px;
-        border: 1px solid #7b7b7b;
+        border: 1px solid $text-dark;
         border-radius: 20px;
     }
     &__img {
         margin-right: 10px;
+        svg {
+            fill: $text-dark;
+        }
     }
     &__content {
         color: $text-dark;
@@ -177,8 +180,8 @@
         }
         &__img {
             svg {
-                width: 90px;
-                height: 90px;
+                width: 80px;
+                height: 80px;
             }
         }
         &__title {
@@ -197,6 +200,14 @@
             }
             .services-item__content {
                 color: $text-light;
+                transition: .7s;             
+            }
+            .services-item__inner {
+                border-color: $text-light;
+                transition: .7s;             
+            }
+            svg {
+                fill: $text-light;
                 transition: .7s;
             }
         }

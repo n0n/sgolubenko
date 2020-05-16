@@ -177,8 +177,13 @@
             line-height: 20px;
         }
         &:hover {
-            transform: scale(1.1);
+            background-color: $text-dark;
             transition: .7s;
+            .aside-item__title,
+            .aside-item__text {
+                color: $text-light;
+                transition: .7s;
+            }
         }
     }
 }

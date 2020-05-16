@@ -41,13 +41,15 @@ a {
 
 .button {
   display: block;
+  position: relative;
   padding: 12px 16px;
   text-align: center;
   font-size: 16px;
   line-height: 18px;
-  color: #2e1516;
-  background: #fffff3;
-  border-radius: 40px;
+  background-color: transparent;
+  border: 1px solid #fffff3;
+  color: #fffff3;
+  border-radius: 30px;
 }
 
 @media (min-width: $tablet-width) {
@@ -67,7 +69,8 @@ a {
     font-size: 20px;
     line-height: 23px;
     &:hover {
-      box-shadow: 0px 0px 25px rgba(255, 255, 243, 0.6);
+      background-color: $text-light;
+      color: $text-dark;
       transition: 0.7s;
     }
   }

@@ -130,7 +130,7 @@
     .main-nav {
         position: unset;
         display: block;
-        width: 400px;
+        width: 375px;
         background-color: transparent;
         &__list {
             padding-top: 10px;
@@ -142,6 +142,7 @@
             margin-bottom: 0;
         }
         &__link {
+            font-size: 19px;
             color: #fffff3;
         }
     }

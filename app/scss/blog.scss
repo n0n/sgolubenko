@@ -27,6 +27,7 @@
             display: block;
             width: 100%;
             height: auto;
+            filter: grayscale(1);
         }
     }
     &__info {
@@ -53,8 +54,8 @@
         width: 70%;
         font-size: 16px;
         line-height: 18px;
-        color: $text-light;
-        background-color: $button-dark;
+        color: $text-dark;
+        border: 1px solid $button-dark;
     }
 }
 
@@ -131,16 +132,17 @@
             font-size: 20px;
             line-height: 23px;
             &:hover {
-                box-shadow: 0px 0px 30px rgba(46, 21, 22, 0.85);
+                color: $text-light;
+                background-color: $button-dark;
                 transition: .7s;
             }
         }
         &__img {
             img {
-                width: 400px;
+                width: 400px;    
                 &:hover {
-                    filter: opacity(.6);
-                    transition: .7s;
+                    filter: grayscale(0);
+                    transition: 1s;
                 }
             }
         }
